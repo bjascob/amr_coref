@@ -43,7 +43,7 @@ To complete training, run the scripts in order.
 
 You'll need `amr_annotation_3.0` and `GloVe/glove.6B.50d.txt` in your `data` directory
 
-The first few scripts with the training data in `data/tdata` and the model training
+The first few scripts will create the training data in `data/tdata` and the model training
 script will create `data/model`. Training takes less than 4 hours.
 
 
