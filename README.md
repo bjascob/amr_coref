@@ -39,7 +39,7 @@ To complete training, run the scripts in order.
 - 10_Build_Model_TData.py
 - 12_Build_Embeddings.py
 - 14_Build_Mention_Tokens.py
-- 30_Train_model.py.
+- 30_Train_Model.py.
 
 You'll need `amr_annotation_3.0` and `GloVe/glove.6B.50d.txt` in your `data` directory
 
