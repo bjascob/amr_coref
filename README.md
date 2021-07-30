@@ -55,4 +55,4 @@ post it here first, until it sees a little utilization.
 
 If you're interested in working towards improving scores, feel free to experiment.  I'd
 be happy to answer questions and/or lend assistance.  If scores can be improved, I'll
-plan to add those changes back into the project.
+plan to add those changes back into the project. 
