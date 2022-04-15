@@ -244,9 +244,16 @@ class AMRCorefModel(nn.Module):
 
     # Build the model from it's saved state dict, configuration and vocabulary
     @classmethod
-    def from_pretrained(cls, model_dir, model_fn='amr_coref.pt', config_fn='config.json'):
+    def from_pretrained(cls, model_dir, model_fn='amr_coref.pt', config_fn='config.json', device=None):
         config     = Config.load(os.path.join(model_dir, config_fn))
-        model_dict = torch.load(os.path.join(model_dir, model_fn))
+        if device is not None:
+            config.device = device
+        # model_dict has keys: 'state_dict', 'graph_tokens', 'mention_set', 'orig_embeds', 'optimizer_state_dict'
+        # All tensors will be loaded onto the device (graph_tokens, ... are not tensors so these load to RAM)
+        # Note that I'm not certain whether loading the optimizer_state_dict onto a specific device is correct.
+        # If this causes an issue map_location can be removed so the default device will be used, or replaced with
+        # a callable where the location dependent on the tensor being loaded (see torch docs).
+        model_dict = torch.load(os.path.join(model_dir, model_fn), map_location=torch.device(config.device))
         assert config.graph_num_embeddings == len(model_dict['graph_tokens'])
         graph_mat   = numpy.zeros(shape=(config.graph_num_embeddings,  config.graph_embedding_dim), dtype='float32')
         vocab       = Vocab(model_dict['graph_tokens'])

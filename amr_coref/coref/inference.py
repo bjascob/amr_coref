@@ -9,8 +9,8 @@ from   .clustering import get_predicted_clusters
 
 
 class Inference(object):
-    def __init__(self, model_dir, show_prog=False, greedyness=0.0, **kwargs):
-        self.model        = AMRCorefModel.from_pretrained(model_dir)
+    def __init__(self, model_dir, show_prog=False, greedyness=0.0, device=None, **kwargs):
+        self.model = AMRCorefModel.from_pretrained(model_dir, device=device)
         # overide max_dist is in kwargs
         if 'max_dist' in kwargs:
             self.model.config.max_dist = kwargs['max_dist']

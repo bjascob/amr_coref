@@ -45,11 +45,12 @@ def print_list_of_strings(items, col_w, max_w):
 
 
 if __name__ == '__main__':
+    device    = 'cpu'   # 'cuda:0'
     model_dir = 'data/model_coref-v0.1.0/'
 
     # Load the model and test data
     print('Loading model from %s' % model_dir)
-    inference = Inference(model_dir)
+    inference = Inference(model_dir, device=device)
 
     # Get test data
     print('Loading test data')
