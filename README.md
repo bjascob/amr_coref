@@ -22,6 +22,16 @@ BLANC :  R=0.524  P=0.799  F₁=0.542
 CoNLL-2012 average score: 0.548
 ```
 
+## Project Status
+The code is considered beta and the following papers have GitHub projects/code that have similar or better scoring and
+may be a preferable solution..
+* [VGAE as Cheap Supervision for AMR Coreference Resolution](https://github.com/IreneZihuiLi/VG-AMRCoref)
+* [End-to-end AMR Coreference Resolution](https://github.com/Sean-Blank/AMRcoref)
+
+**!! Due to the use of multiprocessing, this code may only be compatible with a Debian style OS**.
+See [#3](https://github.com/bjascob/amr_coref/issues/3) for details on the issue.
+
+
 ## Installation and usage
 There is currently no pip installation. To use the library, simply clone the code and use it in place.
 
@@ -45,14 +55,3 @@ You'll need `amr_annotation_3.0` and `GloVe/glove.6B.50d.txt` in your `data` dir
 
 The first few scripts will create the training data in `data/tdata` and the model training
 script will create `data/model`. Training takes less than 4 hours.
-
-
-## Advancement
-I'm considering this a beta release and I'd like to get feedback on usefulness and
-any needed features. Please send me feedback on any changes / improvements.  Eventually
-I will move this code into [amrlib](https://github.com/bjascob/amrlib) but wanted to
-post it here first, until it sees a little utilization.
-
-If you're interested in working towards improving scores, feel free to experiment.  I'd
-be happy to answer questions and/or lend assistance.  If scores can be improved, I'll
-plan to add those changes back into the project.
