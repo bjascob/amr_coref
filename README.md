@@ -23,12 +23,11 @@ CoNLL-2012 average score: 0.548
 ```
 
 ## Project Status
-The code is considered beta and the following papers have GitHub projects/code that have similar or better scoring and
-may be a preferable solution..
+**!! The following papers have GitHub projects/code that are better scoring and may be a preferable solution..**
 * [VGAE as Cheap Supervision for AMR Coreference Resolution](https://github.com/IreneZihuiLi/VG-AMRCoref)
 * [End-to-end AMR Coreference Resolution](https://github.com/Sean-Blank/AMRcoref)
 
-**!! Due to the use of multiprocessing, this code may only be compatible with a Debian style OS**.
+Note that due to the use of multiprocessing, this code may only be compatible with a Debian style OS.
 See [#3](https://github.com/bjascob/amr_coref/issues/3) for details on the issue.
 
 
