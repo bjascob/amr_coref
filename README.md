@@ -23,7 +23,8 @@ CoNLL-2012 average score: 0.548
 ```
 
 ## Project Status
-**!! The following papers have GitHub projects/code that are better scoring and may be a preferable solution..**
+**!! The following papers have GitHub projects/code that are better scoring and may be a preferable solution.**
+See the uploaded file in [#1](https://github.com/bjascob/amr_coref/issues/1) for a quick view of scores.
 * [VGAE as Cheap Supervision for AMR Coreference Resolution](https://github.com/IreneZihuiLi/VG-AMRCoref)
 * [End-to-end AMR Coreference Resolution](https://github.com/Sean-Blank/AMRcoref)
 
